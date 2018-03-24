@@ -1,0 +1,21 @@
+/*
+Copyright (c) 2017 Kryštof Trkovský (https://trko.eu)
+*/
+/* 
+    Created on : 24.3.2018, 15:11:09
+    Author     : Kryštof Trkovský
+*/
+
+@mixin background-image{
+    background-image: $background-image;
+    background-color: $background;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    background-size: auto 100%;
+}
+
+@mixin background-startend{
+    background: url('../img/banner.jpg') center center;
+    background-size: cover;
+}
