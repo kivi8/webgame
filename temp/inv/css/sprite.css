@@ -1,0 +1,200 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 20.7867em 237.1em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.invader1:before {
+      background-position: 0em 0em;
+      width: 12.3337em;
+      height: 11.2063em;
+  }
+
+
+
+
+  .icon.invader10:before {
+      background-position: 0em -11.3em;
+      width: 10.9672em;
+      height: 11.2065em;
+  }
+
+
+
+
+  .icon.invader11:before {
+      background-position: 0em -22.6em;
+      width: 10.9672em;
+      height: 11.206399999999999em;
+  }
+
+
+
+
+  .icon.invader12:before {
+      background-position: 0em -33.9em;
+      width: 10.9672em;
+      height: 11.206399999999999em;
+  }
+
+
+
+
+  .icon.invader13:before {
+      background-position: 0em -45.2em;
+      width: 10.9672em;
+      height: 11.2063em;
+  }
+
+
+
+
+  .icon.invader14:before {
+      background-position: 0em -56.5em;
+      width: 10.9672em;
+      height: 9.805299999999999em;
+  }
+
+
+
+
+  .icon.invader15:before {
+      background-position: 0em -66.4em;
+      width: 12.3336em;
+      height: 11.2177em;
+  }
+
+
+
+
+  .icon.invader16:before {
+      background-position: 0em -77.7em;
+      width: 12.3339em;
+      height: 11.2177em;
+  }
+
+
+
+
+  .icon.invader2:before {
+      background-position: 0em -89em;
+      width: 12.3337em;
+      height: 11.2063em;
+  }
+
+
+
+
+  .icon.invader3:before {
+      background-position: 0em -100.3em;
+      width: 11.7508em;
+      height: 10.6877em;
+  }
+
+
+
+
+  .icon.invader4:before {
+      background-position: 0em -111em;
+      width: 12.3337em;
+      height: 11.2065em;
+  }
+
+
+
+
+  .icon.invader5:before {
+      background-position: 0em -122.3em;
+      width: 10.9671em;
+      height: 11.2065em;
+  }
+
+
+
+
+  .icon.invader6:before {
+      background-position: 0em -133.6em;
+      width: 11.1615em;
+      height: 9.7712em;
+  }
+
+
+
+
+  .icon.invader7:before {
+      background-position: 0em -143.4em;
+      width: 12.3337em;
+      height: 11.2885em;
+  }
+
+
+
+
+  .icon.invader8:before {
+      background-position: 0em -154.7em;
+      width: 12.3341em;
+      height: 11.2063em;
+  }
+
+
+
+
+  .icon.invader9:before {
+      background-position: 0em -166em;
+      width: 10.9672em;
+      height: 11.2065em;
+  }
+
+
+
+
+  .icon.invaderO11:before {
+      background-position: 0em -177.3em;
+      width: 20.7867em;
+      height: 15.1167em;
+  }
+
+
+
+
+  .icon.invaderO12:before {
+      background-position: 0em -192.5em;
+      width: 20.7867em;
+      height: 15.1167em;
+  }
+
+
+
+
+  .icon.invaderO21:before {
+      background-position: 0em -207.7em;
+      width: 15.1167em;
+      height: 15.1167em;
+  }
+
+
+
+
+  .icon.invaderO22:before {
+      background-position: 0em -222.9em;
+      width: 14.175em;
+      height: 14.171899999999999em;
+  }
+
+
+
+
+

@@ -3086,14 +3086,6 @@ html {
   line-height: 1.4;
   color: #fff; }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none; }
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none; }
-
 hr {
   display: block;
   height: 1px;
@@ -3147,7 +3139,8 @@ body {
 header {
   padding: 10em 2em;
   background: url("../img/banner.jpg") center center;
-  background-size: cover; }
+  background-size: cover;
+  box-shadow: 0 5px 4px #1F2533; }
 
 #logo {
   height: 5em;
@@ -3202,6 +3195,8 @@ nav {
         outline: 0; }
       nav > ul > li:hover > a {
         color: #fff; }
+        nav > ul > li:hover > a .fa {
+          animation: fa-spin 2s infinite linear; }
       nav > ul > li.active > a, nav > ul > li.active > span {
         color: #fff; }
 
@@ -3263,53 +3258,14 @@ article {
 .game {
   width: 100%;
   background-color: #000;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  box-shadow: 0 5px 4px #000; }
   .game #game {
-    width: 800px;
+    width: 1200px;
     margin: 0 auto; }
 
 footer {
   padding: 2em 2em;
   background: url("../img/banner.jpg") center center;
-  background-size: cover; }
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important; }
-  a,
-  a:visited {
-    text-decoration: underline; }
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  img {
-    max-width: 100% !important; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-  h2,
-  h3 {
-    page-break-after: avoid; } }
+  background-size: cover;
+  box-shadow: 0 0 5px 4px #1F2533; }

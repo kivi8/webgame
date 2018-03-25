@@ -13,16 +13,6 @@ html {
     color: $foreground;
 }
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
 hr {
     display: block;
     height: 1px;
@@ -85,6 +75,7 @@ body{
 header{
     padding: 10em 2em;
     @include background-startend;
+    box-shadow: 0 5px 4px $shadow;
 }
 
 #logo {
@@ -124,46 +115,49 @@ nav {
     text-align: center;
 
     > ul {
+	display: inline-block;
+	border-radius: 0.35em;
+	box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+	padding: 0 1.5em 0 1.5em;
+
+	> li {
 	    display: inline-block;
-	    border-radius: 0.35em;
-	    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+	    text-align: center;
 	    padding: 0 1.5em 0 1.5em;
 
-	    > li {
-		    display: inline-block;
-		    text-align: center;
-		    padding: 0 1.5em 0 1.5em;
-
-		    > ul {
-			    display: none;
-		    }
-
-		    > a, > span {
-			    display: block;
-			    color: #eee;
-			    color: rgba(255, 255, 255, 0.8);
-			    text-transform: uppercase;
-			    text-decoration: none;
-			    font-size: 0.7em;
-			    letter-spacing: 0.25em;
-			    height: 5em;
-			    line-height: 5em;
-			    transition: all .25s ease-in-out;
-			    outline: 0;
-		    }
-
-		    &:hover {
-			    > a {
-				    color: $foreground;
-			    }
-		    }
-
-		    &.active {
-			    > a, > span {
-				    color: $foreground;
-			    }
-		    }
+	    > ul {
+		display: none;
 	    }
+
+	    > a, > span {
+		display: block;
+		color: #eee;
+		color: rgba(255, 255, 255, 0.8);
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 0.7em;
+		letter-spacing: 0.25em;
+		height: 5em;
+		line-height: 5em;
+		transition: all .25s ease-in-out;
+		outline: 0;
+	    }
+
+	    &:hover {
+		> a {
+		    color: $foreground;
+		    .fa{
+			animation: fa-spin 2s infinite linear;
+		    }	
+		}
+	    }
+
+	    &.active {
+		> a, > span {
+		    color: $foreground;
+		}
+	    }
+	}
     }
 }
 
@@ -250,8 +244,10 @@ article{
     
     background-color: $background;
     padding-bottom: 40px;
+    
+    box-shadow: 0 5px 4px $background;
     #game{
-	width: 800px;
+	width: 1200px;
 	margin: 0 auto;
     }
 }
@@ -261,69 +257,5 @@ article{
 footer{
     padding: 2em 2em;
     @include background-startend;
-}
-
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+    box-shadow: 0 0 5px 4px $shadow;
 }

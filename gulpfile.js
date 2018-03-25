@@ -12,6 +12,14 @@ runSequence = require('run-sequence');
 coffee = require('gulp-coffee');
 minifyHtml = require('gulp-minify-html');
 vhash = require('gulp-vhash');
+svgSprite = require('gulp-svg-sprites');
+
+gulp.task('svg', function(){
+    return gulp.src('./src/img/assets/invaders/*.svg')
+	    .pipe(svgSprite())
+	    .pipe(gulp.dest('./src/img/assets/invaders/inv'));
+});
+
 
 gulp.task('browserSync', function() {
   browserSync.init(null, {
@@ -37,7 +45,7 @@ gulp.task('coffee', function(cb) {
 });
 
 gulp.task('minify-html', function() {
-  gulp.src('./src/*.html')
+  gulp.src('./dist/*.html')
 	  .pipe(minifyHtml())
 	  .pipe(gulp.dest('./dist'));
 });
@@ -62,8 +70,13 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('hash', function() {
-  return gulp.src('./dist/app/presenters/templates/**/*.{js,css}')
-	  .pipe(vhash('./dist/app/presenters/templates/**/*.{htm*,latte}'));
+  return gulp.src('./dist/**/*.{js,css}')
+	  .pipe(vhash('./dist/**/*.{htm*,latte}'));
+});
+
+gulp.task('copy', function(){
+    return gulp.src('./src/*.{png,txt,php,ico}')
+	    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('clean:dist', function() {
@@ -71,7 +84,7 @@ gulp.task('clean:dist', function() {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'coffee', 'useref', 'images', 'fonts'], 'hash'/*, 'minify-html'*/, callback);
+  runSequence('clean:dist', ['sass', 'coffee', 'useref', 'images', 'fonts', 'copy'], 'minify-html','hash', callback);
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function() {
